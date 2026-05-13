@@ -10,4 +10,12 @@ if (wins > 5) {
   console.log("Buen winrate");
 }
 
+let dano = 100;
+let vida = 1000;
 
+if (dano > vida) {
+  console.log("El daño es mayor que la vida");
+}
+else {
+  console.log("La vida es mayor que el daño");
+}
