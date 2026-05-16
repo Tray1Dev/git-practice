@@ -19,3 +19,7 @@ if (dano > vida) {
 else {
   console.log("La vida es mayor que el daño");
 }
+function suma(a, b) {
+  return a + b;
+} 
+console.log(suma(5, 10));
