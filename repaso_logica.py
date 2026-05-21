@@ -1,14 +1,51 @@
-numero = 1
 
-print(numero + numero)
+metas = []
 
-while numero < 2:
-    print("hola amigos") #esto lo esta haciendo siempre y no va a parar por que es menor que 2 siempre lo va ahcer
+while True:
+
+    menu=(input("bienvenido a la aplicacion para extablecer metas, para decir meta oprima 1:  , si quiere salir de este oprima 0: "))
+    if menu == "0":
+        break
+    elif menu == "1":
+        nueva_meta =(input("introduzca su meta:"))
+        metas.append(nueva_meta)
+        print(metas)
+    else:
+        print("introduzca 1 o 0")
+        
+
     
-    break 
-listadecartas = ["sky striker raye","mitsurugi","fuwalos","infernoble"]
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+    
 
-if listadecartas != int:
-    print(listadecartas[2])
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
     
     
