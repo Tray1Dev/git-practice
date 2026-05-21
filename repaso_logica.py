@@ -11,3 +11,4 @@ listadecartas = ["sky striker raye","mitsurugi","fuwalos","infernoble"]
 if listadecartas != int:
     print(listadecartas[2])
     
+    
