@@ -12,6 +12,9 @@ while True:
         print(metas)
     else:
         print("introduzca 1 o 0")
+
+
+        
         
 
     
