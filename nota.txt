@@ -1,0 +1,3 @@
+hola gente
+haciendo una nota para hacer leerla con python.
+aguante python
