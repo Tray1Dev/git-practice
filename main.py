@@ -6,3 +6,5 @@ print(contenido)
 
 archivo.close()
 
+palabras = contenido.split()
+print(palabras)
