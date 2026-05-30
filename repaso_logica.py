@@ -1,17 +1,25 @@
 
-metas = []
+# hoy voy a practicar sin IA solo google y yo a ver como puedo armar un programa que me pida inicio de sesion par entar al bucle el bucle es un programa que me deja guardar canciones que me gustan y puedo hacer dos perfiles diferentes con canciones diferntes
+
+usuarios = {
+    "nombre": "Owen",
+    "correo": "owenlopez3232@gmail,com",
+    "contrasenia": 12345,
+
+    "nombre": "Sofia",
+    "correo": "sofia1@gmail,com",
+    "contrasenia": 54321
+}
 
 while True:
+    var1 = (input("iniciar sesion digite 1:\nsalir del menu:2\n:"))
 
-    menu=(input("bienvenido a la aplicacion para extablecer metas, para decir meta oprima 1:  , si quiere salir de este oprima 0: "))
-    if menu == "0":
+    if var1 == 2:
         break
-    elif menu == "1":
-        nueva_meta =(input("introduzca su meta:"))
-        metas.append(nueva_meta)
-        print(metas)
-    else:
-        print("introduzca 1 o 0")
+
+
+    
+
 
 
         
