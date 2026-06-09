@@ -1,42 +1,36 @@
-#hacer calculadora asi que tenego que tener en cuenta que tipo de variables tengo que establecer.
-
 historial = []
-
-end ="si"
+end = "si"
+run = "no"
 
 while True:
-    menu = input("bienvenido a la calculadora \n \n salir,si/no:").lower() 
+    menu = input("Bienvenido a la calculadora \n \n¿Salir? (si/no): ").lower() 
+    
     if menu == end:
+        print("Gracias por usar la calculadora. Historial final:", historial)
         break
-    elif menu != end:
-        numero = int(input("calculadora \n \n inserta un numero: "))
         
-        numero2 = int(input("inserte otro numero:"))
-
-        operacion = input("elige la operacion:\n\n(+=suma -=resta *=multiplicacion /=division)")
+    elif menu == run:  
+        numero = int(input("\nInserta un numero: "))
+        numero2 = int(input("Inserte otro numero: "))
+        operacion = input("Elige la operacion (+, -, *, /): ")
 
         if operacion == "+":
-            resultado =(numero + numero2)
-            historial.append(resultado)
-            print(resultado,historial)
+            resultado = numero + numero2
         elif operacion == "-":
-            resultado =(numero - numero2)
-            historial.append(resultado)
-            print(resultado,historial)
+            resultado = numero - numero2
         elif operacion == "*":
-            resultado = (numero * numero2)
-            historial.append(resultado)
-            print (resultado,historial)
+            resultado = numero * numero2
         elif operacion == "/":
-            resultado = (numero / numero2)
-            historial.append(resultado)
-            print (resultado,historial)
+            resultado = numero / numero2
         else:
-            print("inserta caracteres validos")
-    
-    else:
-        print("elige un caracter valido")
+            print("Operación no válida.")
+            continue # Salta al inicio del while sin guardar nada
 
+        historial.append(resultado)
+        print(f"Resultado: {resultado} | Historial: {historial}\n")
+        
+    else: 
+        print("Por favor, introduce una opción válida ('si' o 'no').\n")
     
     
     
