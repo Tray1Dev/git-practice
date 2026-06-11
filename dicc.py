@@ -14,18 +14,17 @@ diccionario = {
 
 
 ver = input("ver diccionario:")
-while True:
-    if ver== "si":
-        print(diccionario)
-    elif ver == "no":
-        print("gracias por ver el diccionario")
-        break
-        agrd = input("cambiar algun valor?:")
-        if agrd == "si":
-            key=input("nombre,edad,libros?")
-            if key == "libros":
-                diccionario["libros"] = input(":")
-                print(diccionario["libros"])
+if ver== "si":
+    print(diccionario)
+    agrd = input("cambiar algun valor?:")
+    if agrd == "si":
+        key=input("nombre,edad,libros?")
+        if key == "libros":
+            diccionario["libros"] = input(":")
+            print(diccionario["libros"])
+elif ver == "no":
+    print("gracias por ver el diccionario")
+    
 
 
 ## la cuestion ahora es juntar esto con una funcion para que sea mucho mas facil.
