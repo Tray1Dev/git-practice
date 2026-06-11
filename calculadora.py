@@ -1,7 +1,42 @@
 historial = []
 end = "si"
 run = "no"
+def suma ():
+    numero = int(input("insterte un numero:"))
+    numero2 = int(input("insterte otro numero:"))
+    resultado = numero + numero2
+    print(resultado)
+    historial.append(resultado)
+    print(f"Resultado: {resultado} | Historial: {historial}\n")
 
+## suma()
+def resta ():
+    numero = int(input("insterte un numero:"))
+    numero2 = int(input("insterte un numero:"))
+    resultado = numero - numero2
+    print(resultado)
+    historial.append(resultado)
+    print(f"Resultado: {resultado} | Historial: {historial}\n")
+
+## resta ()
+def multiplicacion ():
+    numero = int(input("insterte un numero:"))
+    numero2 = int(input("insterte un numero:"))
+    resultado = numero * numero2
+    print(resultado)
+    historial.append(resultado)
+    print(f"Resultado: {resultado} | Historial: {historial}\n")
+
+## multiplicacion ()
+def division ():
+    numero = int(input("insterte un numero:"))
+    numero2 = int(input("insterte un numero:"))
+    resultado = numero / numero2
+    print(resultado)
+    historial.append(resultado)
+    print(f"Resultado: {resultado} | Historial: {historial}\n")
+
+## division ()
 while True:
     menu = input("Bienvenido a la calculadora \n \n¿Salir? (si/no): ").lower() 
     
@@ -10,29 +45,26 @@ while True:
         break
         
     elif menu == run:  
-        numero = int(input("\nInserta un numero: "))
-        numero2 = int(input("Inserte otro numero: "))
+        
         operacion = input("Elige la operacion (+, -, *, /): ")
 
         if operacion == "+":
-            resultado = numero + numero2
+            suma()
         elif operacion == "-":
-            resultado = numero - numero2
+            resta()
         elif operacion == "*":
-            resultado = numero * numero2
+            multiplicacion()
         elif operacion == "/":
-            resultado = numero / numero2
+            division()
         else:
             print("Operación no válida.")
-            continue # Salta al inicio del while sin guardar nada
-
-        historial.append(resultado)
-        print(f"Resultado: {resultado} | Historial: {historial}\n")
-        
+            continue # Salta al inicio del while sin guardar nada       
     else: 
         print("Por favor, introduce una opción válida ('si' o 'no').\n")
-    
-    
+
+## este es el codigo que tengo en desarrollo y lo quiero mejorar con cada concepto que aprendo o que repaso, estos dias recupere el while,condicionales, y listas para ver el historial de operaciones
+# ahora me gustaria agruegar las funciones para que sea mas limpio el coodigo vamos alla.
+#  
     
     
     
