@@ -6,11 +6,23 @@ sistema_de_estudio = {
 }
 while True:
     print("bienvenido al tablero de estudio digital",sistema_de_estudio)
+    salir = "si"
+    seguir = "no"
 
+    s = input("salir? (si/no):").lower()
+    if s == salir:
+        print("gracias por usar el tablero digital :)")
+        break
+    elif s == seguir:
+        pass
+    else:
+        print("caracteres no validos")
+        continue
     m = "mate"
     c = "codigo"
 
     p = input("estudiaste mate o codigo?:")
+    
     if p == m:
         print("que estudiaste en mate y cuantas horas?")
         sistema_de_estudio["matematica"].append(input()) 
@@ -22,6 +34,3 @@ while True:
         print("caracteres no validos")
 
     
-# obtuvo forma, ahora quiero darl algo mas de complejidad, pero me gusta :)
-
-# voy a darle mas complejidad entre dias y horas para ser mas especifica, ya no es un diccionario de solo el sistema de estudio si no que ese sea el menu, los diccionarios son solo dos, ya que asi puedo acceder a los dias 

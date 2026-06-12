@@ -11,8 +11,11 @@ matematica = {
     "temas": "",
     "horas": ""
 }
+tablero = [codigo,matematica]
 
 while True:
 
     print("bienvenido al tablero digital",matematica ,codigo)
+
+
     
