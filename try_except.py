@@ -1,3 +1,24 @@
+
+#practica de try/except'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pracitca de funciones de nuevo :P
 historial = []
 def operacion ():
     try:
@@ -29,18 +50,22 @@ def operacion ():
     historial.append(resultado)
     print(f"Resultado: {resultado} | Historial: {historial}\n")
     return resultado
-si = "si"
-no = "no"
-while True:
-    menu = input("bienvenido a la calculadora,quiere continuar?(si/no):")
-    if menu == si:
-        operacion()
-    elif menu == no:
-        print("gracias por usar la calculadora")
-        break
-    else:
-        print("caracter no valido")
-#que felicidad como simplifique el codigo :)
+
+
+operacion()
+
+
+
+
+        
+
+
+
+
+
+
+
+
 
 
     
