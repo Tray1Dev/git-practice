@@ -1,61 +1,44 @@
-
-#practica de try/except'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#pracitca de funciones de nuevo :P
-historial = []
-def operacion ():
+#variables
+si="si"
+no="no"
+mate="mate"
+cod="cod"
+#diccionario
+tablero={
+    "codigo":[] ,
+    "matematica":[] ,
+    "horas":[]
+}
+#funciones
+def verror ():
     try:
-        n1= int(input("ingrese numero:"))
-        n2=int(input("ingrese otro numero:"))
+        horas=int(input("cuantas horas?:"))
+        tablero["horas"].append(horas)
     except ValueError:
-        print("ingresa solo numeros")
+        print("ingrese solo numeros")
         return
-    op= input("que operacion desea hacer?(*,/,+/-):")
-    if op == "+":
-        resultado = n1 + n2
-        print (resultado)
-    elif op == "-":
-        resultado = n1 - n2
-        print (resultado)
-    elif op == "*":
-        resultado = n1 * n2
-        print (resultado)
-    elif op == "/":
-        try:
-            resultado = n1 / n2
-            print(resultado)
-        except ZeroDivisionError:
-            print("no es divisible el 0")
-            return
+def datos ():
+    d=input("que estuidiaste hoy?(mate/cod):")
+    if d == cod:
+        tablero["codigo"]=input("que tema?:") #corregir el fallo de la misma manera que, con las horas, crear variable para almacenar en la lista del diccionario
+        verror()
+        print(tablero)
+    elif d == mate:
+        tablero["matematica"]=input("que tema?:")
+        verror()
+        print(tablero)
     else:
-        print("operacion no valida")
+        print("seleciona'mate'o'cod'")
         return
-    historial.append(resultado)
-    print(f"Resultado: {resultado} | Historial: {historial}\n")
-    return resultado
-
-
-operacion()
-
-
-
+while True:
+    menu = input("bienvenido a el tablero,quiere continuar?(si/no):")
+    if menu == si:
+        datos()
+    elif menu == no:
+        print("gracias por usar el tablero")
+        break
+    else:
+        print("caracter no valido")
 
         
 

@@ -33,4 +33,5 @@ while True:
     else:
         print("caracteres no validos")
 
-    
+#estoy mas orgulloso de este resultado ya quedo mejor, tiene menos posibles errores.
+#     
