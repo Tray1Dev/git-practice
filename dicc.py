@@ -1,33 +1,18 @@
 
-#para practicar un poco de todo lo que he visto, fuera de la calculadora, un programa que le muestre las horas que haga de codigop y matematica para que asi me  muestre el acumulado y los temas que he visto en esos intervalos.
+#complejidad de diccionarios con condicionales mas estrictas.
 
-
-## tener en cuenta que puedo usar,diccionarios, listas funciones, bucles, dare como.
-
-## he elegido los diccionarios como metodo para hacer este sistema asi, usemos un solo diccionario. como prueba antes de este programa 
-#para actualizar update(<obj>)
-diccionario = {
-    "nombres":"owen",
-    "edad": "21",
-    "libros":"sofia"
+codigo = {
+    "dias": "",
+    "temas": "",
+    "horas": ""
+}
+matematica = {
+    "dias": "",
+    "temas": "",
+    "horas": ""
 }
 
+while True:
 
-ver = input("ver diccionario:")
-if ver== "si":
-    print(diccionario)
-    agrd = input("cambiar algun valor?:")
-    if agrd == "si":
-        key=input("nombre,edad,libros?")
-        if key == "libros":
-            diccionario["libros"] = input(":")
-            print(diccionario["libros"])
-elif ver == "no":
-    print("gracias por ver el diccionario")
-    
-
-
-## la cuestion ahora es juntar esto con una funcion para que sea mucho mas facil.
-
-
+    print("bienvenido al tablero digital",matematica ,codigo)
     
