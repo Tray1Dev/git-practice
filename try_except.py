@@ -13,15 +13,20 @@ tablero={
 def verror ():
     try:
         horas=int(input("cuantas horas?:"))
-        tablero["horas"].append(horas)
+        if horas == 0:
+            print("tiempo de estudio valido desde 1 hora.")
+            return
+        else:
+            tablero["horas"].append(horas)
     except ValueError:
         print("ingrese solo numeros")
         return
+    
 def datos ():
     d=input("que estuidiaste hoy?(mate/cod):")
     if d == cod:
         tab =input("que tema?:")
-        tablero["codigo"].append(tab) #corregir el fallo de la misma manera que, con las horas, crear variable para almacenar en la lista del diccionario
+        tablero["codigo"].append(tab) 
         verror()
         print(tablero)
     elif d == mate:
@@ -42,7 +47,8 @@ while True:
     else:
         print("caracter no valido")
 
-#para hoy tenia pendiente arreglar unos detalles, con los append, ya que solo la lista de los numeros es la unica que se queda
+#ahora tengo que encontrar la manera de que se puedan vincular directamente las horas con los teemas por que no se va a saber especificamente de que tema se estudia.
+
 
         
 
