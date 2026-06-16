@@ -20,11 +20,13 @@ def verror ():
 def datos ():
     d=input("que estuidiaste hoy?(mate/cod):")
     if d == cod:
-        tablero["codigo"]=input("que tema?:") #corregir el fallo de la misma manera que, con las horas, crear variable para almacenar en la lista del diccionario
+        tab =input("que tema?:")
+        tablero["codigo"].append(tab) #corregir el fallo de la misma manera que, con las horas, crear variable para almacenar en la lista del diccionario
         verror()
         print(tablero)
     elif d == mate:
-        tablero["matematica"]=input("que tema?:")
+        tab =input("que tema?:")
+        tablero["matematica"].append(tab)
         verror()
         print(tablero)
     else:
@@ -39,6 +41,8 @@ while True:
         break
     else:
         print("caracter no valido")
+
+#para hoy tenia pendiente arreglar unos detalles, con los append, ya que solo la lista de los numeros es la unica que se queda
 
         
 
