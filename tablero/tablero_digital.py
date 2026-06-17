@@ -49,7 +49,7 @@ while True:
     else:
         print("caracter no valido")
 
-#ahora tengo que encontrar la manera de que se puedan vincular directamente las horas con los teemas por que no se va a saber especificamente de que tema se estudia.
+
 
 
         
