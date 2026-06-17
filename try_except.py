@@ -12,35 +12,37 @@ tablero={
 #funciones
 def verror ():
     try:
-        horas=int(input("cuantas horas?:"))
+        horas=int(input("cuantas horas estudiaste hoy?:"))
         if horas == 0:
             print("tiempo de estudio valido desde 1 hora.")
-            return
+            return False
         else:
             tablero["horas"].append(horas)
+            return True
     except ValueError:
         print("ingrese solo numeros")
-        return
-    
+        return False    
 def datos ():
     d=input("que estuidiaste hoy?(mate/cod):")
     if d == cod:
         tab =input("que tema?:")
         tablero["codigo"].append(tab) 
-        verror()
         print(tablero)
     elif d == mate:
         tab =input("que tema?:")
         tablero["matematica"].append(tab)
-        verror()
         print(tablero)
     else:
         print("seleciona'mate'o'cod'")
         return
 while True:
+    
     menu = input("bienvenido a el tablero,quiere continuar?(si/no):")
     if menu == si:
-        datos()
+        if verror() == False:
+            continue
+        else:
+            datos()   
     elif menu == no:
         print("gracias por usar el tablero")
         break
