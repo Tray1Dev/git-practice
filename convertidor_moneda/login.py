@@ -13,15 +13,33 @@ perfiles={
 contrasenia={
     "contra":"0304"
 }
-
+baseDeDatos={
+    "usuarios":[
+        {
+            "id": 0,
+            "nombre":"creador",
+            "email":"cr@gmail.com",
+            "contra":"0304",
+            "roles":["ceo"]
+        },
+        {
+            "id": 1,
+            "nombre":"1delegado",
+            "email":"dl@gmail.com",
+            "contra":"0203",
+            "roles":["admin"]  
+        }
+    ]
+}
 def baseDatos():
     d=input("esta seguro que quiere crear la base de datos\n\n\n si(1) no(2)")
     if d == incioSesion:
         pw=input("ingrese la contrasenia:")
-        if pw == contrasenia["contra"]:
+        if pw == baseDatos[0][3]:
             print("orden consedida")
-            with open("base de datos/convertidor_moneda""w")as base:
-                json.dump(base)
+            with open("base_de_datos.json/convertidor_moneda","w",encoding="utf-8")as archivo:
+                json.dump(baseDeDatos,archivo)
+            print("base de datos creada")
         else:
             print("orden denegada")
     elif d == salir:
@@ -67,10 +85,7 @@ def sesion ():
     elif b == salir:
         menu()
         return
-#def validar ():
-    #try:
-        #menu
-    #except:
+
 def menu():        
     while True:
         menu = str(input("banco de intercambio\n""inicio de sesion(1):\n""salir(2):\n""inserte una opcion:"))
@@ -78,10 +93,14 @@ def menu():
             sesion()
         elif menu == salir:
             print("gracias por creer en mi dios")
+        
             break
         else:
             print("caracteres invalidos.\n recuerde inicio sesion(1)   salir(2)")
         
 
 menu()
+
+#tengo la frecuencia de los menus, como interactua uno con otro, ahora tengo que dar como creo la base de datos, interactuar con ella al momento.
+
 
