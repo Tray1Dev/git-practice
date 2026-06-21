@@ -39,15 +39,27 @@ empresa = {
         }
     ]   
 }
+def pedirDatos ():
+    correo = input("cual es su correo:")
+    try:
+        contrasena = int(input("cual es su contrasena:"))
+    except:
+        UnboundLocalError
+        print("solo numeros")
+    return correo,contrasena 
+  
+def verificarDatos(correo,contrasena):
+    encontrado=False
+    for correos in empresa["usuarios"]:
+        if correo == correos["correo"] and contrasena == correos["contrasena"]:
+            encontrado=True
+            print("bienvenido")
+    if not encontrado:
+        print("error") 
+        return
+        
+correo,contrasena = pedirDatos() 
 
-correo = input("cual es su correo:")
-for correos in empresa["usuarios"]:
-    if correo == correos["correo"]:
-        print(correos["contrasena"])
-        contrasena = int(input("cual es su contrasena:"))    
-        if contrasena == correos["contrasena"]:
-            print("bienvenido de nuevo")
-        else:
-            print("contrasena incorrecta")
+verificarDatos(correo,contrasena)
 
     
